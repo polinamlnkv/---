@@ -1,0 +1,189 @@
+
+:root {
+  --color-bg: #313338;
+  --color-surface: #2b2d31;
+  --color-surface-dark: #1e1f22;
+  --color-brand: #5865f2;
+  --color-brand-hover: #4752c4;
+  --color-muted: #99aab5;
+  --color-muted-hover: #4e5058;
+  --color-text: #f2f3f5;
+
+ 
+  --radius-card: 16px;      
+  --radius-btn: 50%;        
+  --gap-base: 12px;         
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  font-family: "Noto Sans", "Segoe UI", Arial, Helvetica, sans-serif; 
+  color: var(--color-text);
+}
+
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: var(--color-surface);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); 
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.logo-accent {
+  color: var(--color-brand);
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.15s ease; 
+}
+
+.nav-link:hover {
+  color: var(--color-brand);
+}
+
+.nav-btn {
+  background: var(--color-brand);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 22px;         
+  border-radius: 28px;        
+  font-weight: 700;
+  transition: background 0.15s ease;
+}
+
+.nav-btn:hover {
+  background: var(--color-brand-hover);
+}
+
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+
+.calc-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 28px;                                  
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+
+.result {
+  width: 250px;
+  height: 60px;
+  margin-bottom: 18px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: var(--color-surface-dark);
+  color: var(--color-text);
+  text-align: right;
+  line-height: 60px;
+  font-size: 1.8rem;
+  font-family: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.keys-row {
+  display: flex;
+  gap: var(--gap-base);
+  margin-bottom: var(--gap-base);
+}
+
+.keys-row:last-child {
+  margin-bottom: 0;
+}
+
+
+.my-btn {
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: var(--radius-btn);
+  background: var(--color-muted-hover);
+  color: var(--color-text);
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease, filter 0.1s ease; /* transition тоже "снят" с hover-эффектов discord.com */
+}
+
+.my-btn:hover {
+  background: #43444b;
+}
+
+.my-btn:active {
+  filter: brightness(130%);
+}
+
+
+.my-btn.secondary {
+  background: var(--color-muted);
+  color: #1e1f22;
+}
+
+.my-btn.secondary:hover {
+  background: #7f909b;
+}
+
+
+.my-btn.primary {
+  background: var(--color-brand);
+  color: #ffffff;
+}
+
+.my-btn.primary:hover {
+  background: var(--color-brand-hover);
+}
+
+
+.my-btn.execute {
+  width: 122px;
+  border-radius: 27px;
+  background: var(--color-brand);
+  color: #ffffff;
+}
+
+.my-btn.execute:hover {
+  background: var(--color-brand-hover);
+}
+
+
+.my-btn.zero {
+  width: 54px;
+}
+
+.footer-note {
+  margin-top: 32px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
